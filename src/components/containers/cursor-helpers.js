@@ -13,6 +13,10 @@ const CursorHelpers = {
       cursorSVGPosition.x,
       cursorSVGPosition.y
     );
+    console.log('parentSVG', parentSVG);
+    console.log('domain', domain)
+    console.log('cursorSVGPosition', cursorSVGPosition)
+    console.log('cursorValue', cursorValue)
 
     const inBounds = BrushHelpers.withinBounds(cursorValue, {
       x1: domain.x[0],
@@ -20,6 +24,9 @@ const CursorHelpers = {
       y1: domain.y[0],
       y2: domain.y[1]
     });
+
+    console.log('inBounds', inBounds);
+    console.log('targetProps', targetProps);
 
     if (!inBounds) {
       cursorValue = null;
